@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="xcore">
+      <UniqueIdentifier>{2b7a5664-44d7-440f-ade8-2569c15d2fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frame">
+      <UniqueIdentifier>{33f5fd71-7f15-45e4-870d-755a1597e9c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{adf7b239-177c-4357-b813-40c991f7d446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db\include">
+      <UniqueIdentifier>{350947ca-4641-4d6d-b18a-da651b0fdb5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db\src">
+      <UniqueIdentifier>{57259b4b-9200-4474-a7af-54c91581aa1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db\mysql">
+      <UniqueIdentifier>{ef83f3fc-35d4-404e-976a-e4c7676170cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cache">
+      <UniqueIdentifier>{aa37deab-0f1a-44d8-b015-bc98302a85f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cache\include">
+      <UniqueIdentifier>{b5c4a763-0bb0-407f-aa3d-db559df3f820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cache\src">
+      <UniqueIdentifier>{9e671743-df3c-4c63-abcd-1a8f9c9fb723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{8da9d6ee-8875-438c-9e64-19298fee51a3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\frame\db_helper.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\frame\main.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\db\include\db_mysql.h">
+      <Filter>db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cache\include\cache_column.h">
+      <Filter>cache\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cache\include\cache_table.h">
+      <Filter>cache\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cache\include\define.h">
+      <Filter>cache\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_atomic.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_base64.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_byte_order.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_clock.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_conver.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_crc.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_critical.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_define.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_event.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_file_util.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_json.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_log.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_macro.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_markup.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_md5.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_memory.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_mutex.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_noncopyable.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_parser.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_rc4.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_rw_lock.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_semaphore.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_sha1.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_sock_addr.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_socket.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_str_util.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_thread.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_thread_array.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_thread_pool.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_thread_queue.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_time.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_time_span.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_timer.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_utf8.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_utility.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\xcore\include\xcore_version.h">
+      <Filter>xcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\big_endian.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\byte_order_generic.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\byte_order_generic_x86.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\decimal.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\errmsg.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\keycache.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\little_endian.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\m_ctype.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\m_string.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_alloc.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_byteorder.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_compiler.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_config.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_dbug.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_dir.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_getopt.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_global.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_list.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_net.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_pthread.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_sys.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\my_xml.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql_com.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql_com_server.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql_embed.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql_time.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysql_version.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysqld_ername.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\mysqld_error.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\sql_common.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\sql_state.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\sslopt-case.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\sslopt-longopts.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\sslopt-vars.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\trunk\pub_libs\mysql6.1.5\win32\include\typelib.h">
+      <Filter>db\mysql</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\frame\db_helper.cpp">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\frame\main.cpp">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\db\src\db_mysql.cpp">
+      <Filter>db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cache\src\cache_column.cpp">
+      <Filter>cache\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cache\src\cache_table.cpp">
+      <Filter>cache\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
