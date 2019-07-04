@@ -9,5 +9,5 @@ rem    ·参数修改，支持第一个参数为选项参数，选项参数目�
 rem    ·参数可以混搭 比如 -rn  -np 但是不支持 -r -n， -p -r  这种分开写的方式
 rem    ·不带选项参数的情况下，默认为 -n 即生成普通的数据库封装文件
 
-DBtoolsD.exe -rnp localhost 3306 test root 123456 ./files/
+DBTableCreaterD.exe -rnp localhost 3306 test root 123456 ./files/
 pause
