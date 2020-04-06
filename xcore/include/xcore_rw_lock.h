@@ -1,7 +1,7 @@
-// 2010-05-02
+О╩©// 2010-05-02
 // xcore_rw_lock.h
 // guosh
-// ╤ап╢кЬ
+// Х╞╩Е├≥И■│
 
 
 #ifndef _XCORE_RW_LOCK_H_

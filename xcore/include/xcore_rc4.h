@@ -1,7 +1,7 @@
-// 2007-08-01
+ï»¿// 2007-08-01
 // xcore_rc4.h
 // guosh
-// RC4Á÷¼ÓÃÜ(ĞòÁĞ¼ÓÃÜ)Ëã·¨Ö§³ÖÀà
+// RC4æµåŠ å¯†(åºåˆ—åŠ å¯†)ç®—æ³•æ”¯æŒç±»
 
 
 #ifndef _XCORE_RC4_H_
@@ -20,13 +20,13 @@ class RC4
 public:
 	RC4();
 
-	// Ê¹ÓÃ×Ö½ÚĞòÁĞ³õÊ¼»¯S-box
+	// ä½¿ç”¨å­—èŠ‚åºåˆ—åˆå§‹åŒ–S-box
 	void init(byte* key, uint8 keylen);
 
-	// Ê¹ÓÃ×Ö·û´®³õÊ¼»¯S-box
+	// ä½¿ç”¨å­—ç¬¦ä¸²åˆå§‹åŒ–S-box
 	void init(const string& key);
 
-	// ¼Ó/½âÃÜ
+	// åŠ /è§£å¯†
 	void update(const byte* input, byte* output, uint32 length);
 
 private:

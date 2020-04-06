@@ -1,7 +1,7 @@
-// 2008-06-10
+ï»¿// 2008-06-10
 // xcore_crc.h
 // guosh
-// CRC¼ìÑéÀà
+// CRCæ£€éªŒç±»
 
 
 #ifndef _XCORE_CRC_H_
@@ -21,7 +21,7 @@ namespace xcore
 
 uint16 crc_ccitt(const void* src, uint32 len, uint16 checksum = 0);  // ok
 
-// ·´Ğòccitt
+// ååºccitt
 //uint16 crc_ccitt_rev(const void* src, uint32 len, uint16 checksum = 0);  // check
 
 } // namespace xcore

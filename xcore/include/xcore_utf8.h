@@ -1,7 +1,7 @@
-// 2013-09-26
+ï»¿// 2013-09-26
 // xcore_utf8.h
 // guosh
-// UTF-8±àÂëÖ§³ÖÀà
+// UTF-8ç¼–ç æ”¯æŒç±»
 
 #ifndef _XCORE_UTF8_H_
 #define _XCORE_UTF8_H_
@@ -12,40 +12,40 @@ namespace xcore
 {
 
 ///////////////////////////////////////////////////////////////////////////////
-// UCS2È¡Öµ·¶Î§: 0X0 - 0XFFFF
-// UCS4È¡Öµ·¶Î§: 0X0 - 0X7FFFFFFF
-// UTF8È¡Öµ·¶Î§: 0X0 - 0XFDBFBFBFBFBF
+// UCS2å–å€¼èŒƒå›´: 0X0 - 0XFFFF
+// UCS4å–å€¼èŒƒå›´: 0X0 - 0X7FFFFFFF
+// UTF8å–å€¼èŒƒå›´: 0X0 - 0XFDBFBFBFBFBF
 // class XUTF8
 ///////////////////////////////////////////////////////////////////////////////
 class XUTF8
 {
 public:
-	// ·µ»Øutf8×Ö·û, < 0:±íÊ¾³ö´í
+	// è¿”å›utf8å­—ç¬¦, < 0:è¡¨ç¤ºå‡ºé”™
 	static int64 ucs4_to_utf8(int32 ucs4);
 	static int64 ucs2_to_utf8(uint16 ucs2);
 
-	// ·µ»Øucs4/ucs2×Ö·û, < 0:±íÊ¾³ö´í
+	// è¿”å›ucs4/ucs2å­—ç¬¦, < 0:è¡¨ç¤ºå‡ºé”™
 	static int32 utf8_to_ucs4(int64 utf8);
 	static int32 utf8_to_ucs2(int64 utf8);
 
-	// ÊÇ·ñÎªutf8×Ö·û
+	// æ˜¯å¦ä¸ºutf8å­—ç¬¦
 	static bool is_utf8(int64 utf8);
 
-	// ´Ó×Ö·ûÁ÷ÖĞ¼ì³öÒ»¸öutf8×Ö·û,·µ»Ø¸Ã×Ö·û³¤¶È,0±íÊ¾´íÎó
+	// ä»å­—ç¬¦æµä¸­æ£€å‡ºä¸€ä¸ªutf8å­—ç¬¦,è¿”å›è¯¥å­—ç¬¦é•¿åº¦,0è¡¨ç¤ºé”™è¯¯
 	static uint32 checkout_utf8_char(const char* szStr);
 
-	// ´Ó×Ö·ûÁ÷ÖĞ¼ì³öutf8×Ö·û´®,·µ»Ø¼ì³öµÄ×Ö·û´®(szStr¿ÉÄÜ²»ÊÇÒ»¸öÍêÕûµÄutf8×Ö·û´®)
+	// ä»å­—ç¬¦æµä¸­æ£€å‡ºutf8å­—ç¬¦ä¸²,è¿”å›æ£€å‡ºçš„å­—ç¬¦ä¸²(szStrå¯èƒ½ä¸æ˜¯ä¸€ä¸ªå®Œæ•´çš„utf8å­—ç¬¦ä¸²)
 	static string checkout_utf8_string(const char* szStr);
 
-	// ÊÇ·ñÎªÒ»¸öÍêÕûµÄutf8×Ö·û´®
+	// æ˜¯å¦ä¸ºä¸€ä¸ªå®Œæ•´çš„utf8å­—ç¬¦ä¸²
 	static bool is_utf8_string(const char* szStr, uint32 length);
 
-	// °ÑÒ»¸öucs2/ucs4±àÂëÎªutf8¸ñÊ½²¢Æ´½Óµ½×Ö·û´®ºó
+	// æŠŠä¸€ä¸ªucs2/ucs4ç¼–ç ä¸ºutf8æ ¼å¼å¹¶æ‹¼æ¥åˆ°å­—ç¬¦ä¸²å
 	static void append_to_utf8_string(string& utf8, uint16 ucs2);
 	static bool append_to_utf8_string(string& utf8, int32 ucs4);
 
-	// ¶ÁÎÄ¼şÄÚÈİ×ªÎªutf8±àÂë¸ñÊ½
-	// src_format: Ô´ÎÄ¼ş±àÂë¸ñÊ½=>ANSI/ASCII,UTF-16,UTF-16 - Big Endian,UTF-8,UTF-8 NO BOM,UTF-16 - NO BOM,UTF-16 - Big Endian - NO BOM
+	// è¯»æ–‡ä»¶å†…å®¹è½¬ä¸ºutf8ç¼–ç æ ¼å¼
+	// src_format: æºæ–‡ä»¶ç¼–ç æ ¼å¼=>ANSI/ASCII,UTF-16,UTF-16 - Big Endian,UTF-8,UTF-8 NO BOM,UTF-16 - NO BOM,UTF-16 - Big Endian - NO BOM
 	static bool readfile_to_utf8(string& utf8, string& src_format, const string& filepath);
 };
 

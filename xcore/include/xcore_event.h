@@ -1,7 +1,7 @@
-// 2008-02-23
+ï»¿// 2008-02-23
 // xcore_event.h
 // guosh
-// windowsÏÂµÄÊÂ¼ş¸ÅÄî
+// windowsä¸‹çš„äº‹ä»¶æ¦‚å¿µ
 
 
 #ifndef _XCORE_EVENT_H_

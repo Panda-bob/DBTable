@@ -1,4 +1,4 @@
-#ifndef _DB_TABLE_TAB_COLLECT_
+﻿#ifndef _DB_TABLE_TAB_COLLECT_
 #define _DB_TABLE_TAB_COLLECT_
 
 #include "xcore_define.h"

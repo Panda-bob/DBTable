@@ -1,4 +1,4 @@
-#ifndef _DB_TOOL_CACHE_COLUMN_H_
+ï»¿#ifndef _DB_TOOL_CACHE_COLUMN_H_
 #define _DB_TOOL_CACHE_COLUMN_H_
 
 #include "define.h"
@@ -7,31 +7,31 @@
 class Cache_column
 {
 public:
-	string           table_schema; //¸Ã×Ö¶ÎÊôÓÚÄÄ¸ö¿â
-	string           table_name; //¸Ã×Ö¶ÎÊôÓÚÄÄ¸ö±í
-	string           column_name;//Êı¾İ¿âÖĞµÄ±äÁ¿Ãû
-	uint32           ordinal_position; //Ä¬ÈÏË³Ğò
+	string           table_schema; //è¯¥å­—æ®µå±äºå“ªä¸ªåº“
+	string           table_name; //è¯¥å­—æ®µå±äºå“ªä¸ªè¡¨
+	string           column_name;//æ•°æ®åº“ä¸­çš„å˜é‡å
+	uint32           ordinal_position; //é»˜è®¤é¡ºåº
 	string           column_default;
 	bool             is_nullable;	
 	string           o_date_type;
-	uint32           character_maximum_length;//×î´ó³¤¶È
-	uint32           character_octet_length;//°ËÎ»³¤¶È
-	uint32           numeric_precision;//Êı×Ö¾«¶È
+	uint32           character_maximum_length;//æœ€å¤§é•¿åº¦
+	uint32           character_octet_length;//å…«ä½é•¿åº¦
+	uint32           numeric_precision;//æ•°å­—ç²¾åº¦
 	uint32           numeric_scale;
-	string           character_set_name;//×Ö·û¼¯£¨×Ö·û´®Àà×Ö¶Î»áÓÃµ½£©
-	string           collation_name;//×Ö·û¼¯Ãû³Æ
-	string           column_type;//×Ö¶ÎÀàĞÍµÄ¾ßÌåÃèÊö£¬
-	string           column_key;//°ó¶¨¼üÖµ(Ö÷¼ü£¬Î¨Ò»Ë÷ÒıµÈ)
-	string           extra;//¶îÍâ×Ö½Ú£¬×ÔÔö³¤µÈ
-	string           privileges;//Ö§³ÖµÄ²Ù×÷
-	string           column_comment;//×Ö¶Î×¢ÊÍ
+	string           character_set_name;//å­—ç¬¦é›†ï¼ˆå­—ç¬¦ä¸²ç±»å­—æ®µä¼šç”¨åˆ°ï¼‰
+	string           collation_name;//å­—ç¬¦é›†åç§°
+	string           column_type;//å­—æ®µç±»å‹çš„å…·ä½“æè¿°ï¼Œ
+	string           column_key;//ç»‘å®šé”®å€¼(ä¸»é”®ï¼Œå”¯ä¸€ç´¢å¼•ç­‰)
+	string           extra;//é¢å¤–å­—èŠ‚ï¼Œè‡ªå¢é•¿ç­‰
+	string           privileges;//æ”¯æŒçš„æ“ä½œ
+	string           column_comment;//å­—æ®µæ³¨é‡Š
 
 public:
 	bool check_init();
 
 	
 private:
-	bool prepare_c_conv();//¸ù¾İÊı¾İ»ù´¡½á¹¹£¬×¼±¸Éú³ÉC±àÂëĞèÒªµÄ»ù´¡½á¹¹
+	bool prepare_c_conv();//æ ¹æ®æ•°æ®åŸºç¡€ç»“æ„ï¼Œå‡†å¤‡ç”ŸæˆCç¼–ç éœ€è¦çš„åŸºç¡€ç»“æ„
 	bool prepare_c_name();
 	bool prepare_c_type();
 	bool prepare_c_default();
@@ -46,15 +46,15 @@ private:
 public:
 	COLUMN_DATA_TYPE data_type;
 
-	string c_member_name;// C++±äÁ¿Ãû
-	string c_member_type;// C++ÀàĞÍÃû
-	string c_format;//¸ñÊ½»¯×Ö·û´®ÖĞµÄÕ¼Î»·û
-	string c_construct_default;//¹¹Ôìº¯ÊıÖĞµÄ³õÊ¼»¯²¿·Ö( m_aa(0) )
-	string c_createsql_default;//½¨±íÓï¾äÖĞµÄÄ¬ÈÏÖµ²¿·Ö
+	string c_member_name;// C++å˜é‡å
+	string c_member_type;// C++ç±»å‹å
+	string c_format;//æ ¼å¼åŒ–å­—ç¬¦ä¸²ä¸­çš„å ä½ç¬¦
+	string c_construct_default;//æ„é€ å‡½æ•°ä¸­çš„åˆå§‹åŒ–éƒ¨åˆ†( m_aa(0) )
+	string c_createsql_default;//å»ºè¡¨è¯­å¥ä¸­çš„é»˜è®¤å€¼éƒ¨åˆ†
 
-	string c_select_one_getvalu;//selectÓï¾äÖĞ£¬»ñÈ¡¸Ã×Ö¶ÎµÄÖµµÄÓï¾ä
-	string c_use_vec_value;//insert¶à¸ö×Ö·û´®µÄÓï¾äÖĞ£¬¸Ã×Ö¶ÎµÄValueÖµ±íÊ¾
-	string c_use_data_value;//×ª»»³ÉValue½á¹¹
+	string c_select_one_getvalu;//selectè¯­å¥ä¸­ï¼Œè·å–è¯¥å­—æ®µçš„å€¼çš„è¯­å¥
+	string c_use_vec_value;//insertå¤šä¸ªå­—ç¬¦ä¸²çš„è¯­å¥ä¸­ï¼Œè¯¥å­—æ®µçš„Valueå€¼è¡¨ç¤º
+	string c_use_data_value;//è½¬æ¢æˆValueç»“æ„
 	
 };
 

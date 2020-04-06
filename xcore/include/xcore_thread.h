@@ -1,7 +1,7 @@
-// 2008-02-23
+ï»¿// 2008-02-23
 // xcore_thread.h
 // guosh
-// Ïß³ÌÀàÊµÏÖ
+// çº¿ç¨‹ç±»å®ç°
 
 
 #ifndef _XCORE_THREAD_H_
@@ -72,7 +72,7 @@ pthread_t thread_id();
 
 void sleep(uint32 msec);
 
-// ·ÅÆúCPUÊ±¼äÆ¬,ÇĞ»»Ïß³Ì
+// æ”¾å¼ƒCPUæ—¶é—´ç‰‡,åˆ‡æ¢çº¿ç¨‹
 void yield();
 
 uint32 rand();

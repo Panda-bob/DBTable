@@ -1,4 +1,4 @@
-#include "common.h"
+﻿#include "common.h"
 
 void strTrimLeft(string& strSrc, const string& strTrim)
 {

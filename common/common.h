@@ -1,4 +1,4 @@
-#ifndef _DB_TOOL_COMMON_H_
+﻿#ifndef _DB_TOOL_COMMON_H_
 #define _DB_TOOL_COMMON_H_
 
 #include <string>

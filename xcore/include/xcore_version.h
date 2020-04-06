@@ -1,7 +1,7 @@
-// 2011-11-14
+﻿// 2011-11-14
 // xcore_version.h
 // guosh
-// xcore��汾��Ϣ
+// xcore库版本信息
 
 
 #ifndef _XCORE_VERSION_H_

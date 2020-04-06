@@ -1,7 +1,7 @@
-// 2009-02-04
+ï»¿// 2009-02-04
 // xcore_str_util.h
 // guosh
-// °ü×°Ò»Ğ©·½±ã×Ö·û´®²Ù×÷µÄº¯Êı
+// åŒ…è£…ä¸€äº›æ–¹ä¾¿å­—ç¬¦ä¸²æ“ä½œçš„å‡½æ•°
 
 
 #ifndef _XCORE_STR_UTIL_H_
@@ -18,44 +18,44 @@ namespace xcore
 class XStrUtil
 {
 public:
-	// È¥³ı×Ö·û´®Í·(»òÎ²)ÖĞÔÚ×Ö·û¼¯ÖĞÖ¸¶¨µÄ×Ö·û
+	// å»é™¤å­—ç¬¦ä¸²å¤´(æˆ–å°¾)ä¸­åœ¨å­—ç¬¦é›†ä¸­æŒ‡å®šçš„å­—ç¬¦
 	static string& chop_head(string& strSrc, const char* pcszCharSet = " \t\r\n");
 	static string& chop_tail(string& strSrc, const char* pcszCharSet = " \t\r\n");
-	static string& chop(string& strSrc, const char* pcszCharSet = " \t\r\n"); // È¥³ıÍ·ºÍÎ²ÖĞÖ¸¶¨×Ö·û
-	static string& chop_all(string& strSrc, const char* pcszCharSet = " \t\r\n"); // È¥³ı×Ö·û´®ÖĞËùÓĞÖ¸¶¨×Ö·û
+	static string& chop(string& strSrc, const char* pcszCharSet = " \t\r\n"); // å»é™¤å¤´å’Œå°¾ä¸­æŒ‡å®šå­—ç¬¦
+	static string& chop_all(string& strSrc, const char* pcszCharSet = " \t\r\n"); // å»é™¤å­—ç¬¦ä¸²ä¸­æ‰€æœ‰æŒ‡å®šå­—ç¬¦
 
-	// ×Ö·û´®×ª´óĞ´(»òĞ¡Ğ´)
+	// å­—ç¬¦ä¸²è½¬å¤§å†™(æˆ–å°å†™)
 	static void to_upper(char* pszSrc);
 	static void to_lower(char* pszSrc);
 	static void to_upper(string& strSrc);
 	static void to_lower(string& strSrc);
 
-	// Ìæ»»
+	// æ›¿æ¢
 	static void replace(char* str, char oldch, char newch);
 	static void replace(char* str, const char* oldCharSet, char newch);
 	static void replace(string& str, char oldch, char newch);
-	static void replace(string& str, const char* oldCharSet, char newch); // ÕÒµ½Ö¸¶¨µÄ×Ö·û¼¯ºÏ¾ù»»ÎªÖ¸¶¨×Ö·û
+	static void replace(string& str, const char* oldCharSet, char newch); // æ‰¾åˆ°æŒ‡å®šçš„å­—ç¬¦é›†åˆå‡æ¢ä¸ºæŒ‡å®šå­—ç¬¦
 
-	// Æ´½Ó
+	// æ‹¼æ¥
 	static string join(const vector<string>& a, const string& sep);
 
-	// ÖØ¸´
+	// é‡å¤
 	static string repeat(const string& str, uint32 count);
 
-	// Çø·Ö´óĞ¡Ğ´±È½Ï
+	// åŒºåˆ†å¤§å°å†™æ¯”è¾ƒ
 	static int compare(const char* pszSrc1, const char* pszSrc2, int length = -1);
 	static int compare(const string& str1, const string& str2, int length = -1);
 
-	// ²»Çø·Ö´óĞ¡Ğ´±È½Ï
+	// ä¸åŒºåˆ†å¤§å°å†™æ¯”è¾ƒ
 	static int compare_nocase(const char* pszSrc1, const char* pszSrc2, int length = -1);
 	static int compare_nocase(const string& str1, const string& str2, int length = -1);
 
-	// ¸ù¾İ×Ö·û¼¯ÖĞÖ¸¶¨µÄ·Ö¸ô×Ö·û·Ö½âÔ´×Ö·û´®,²¢·ÅÖÃµ½vectorÖĞ
-	// nMaxCountÖ¸¶¨ÆÚÍûµÃµ½µÄĞĞÊı,½âÎöµ½maxCount½«ÖÕÖ¹²¢·µ»Ø,²»»á¼ÌĞø½âÎö;ÉèÎª-1±íÊ¾½âÎöËùÓĞ
+	// æ ¹æ®å­—ç¬¦é›†ä¸­æŒ‡å®šçš„åˆ†éš”å­—ç¬¦åˆ†è§£æºå­—ç¬¦ä¸²,å¹¶æ”¾ç½®åˆ°vectorä¸­
+	// nMaxCountæŒ‡å®šæœŸæœ›å¾—åˆ°çš„è¡Œæ•°,è§£æåˆ°maxCountå°†ç»ˆæ­¢å¹¶è¿”å›,ä¸ä¼šç»§ç»­è§£æ;è®¾ä¸º-1è¡¨ç¤ºè§£ææ‰€æœ‰
 	static uint32 split(const string& strSrc, vector<string>& vItems, const char* pcszCharSet = " \r\n\t",
 	                    int nMaxCount = -1);
 
-	// ×Ö·û´®×ªÕûÊı
+	// å­—ç¬¦ä¸²è½¬æ•´æ•°
 	static bool	  to_int(const string& strSrc, int& nValue, int radix = 10);
 	static int	  to_int_def(const string& strSrc, int def = -1, int radix = 10);
 	static int	  try_to_int_def(const string& strSrc, int def = -1, int radix = 10);
@@ -66,19 +66,19 @@ public:
 	static uint64 to_uint64_def(const string& strSrc, uint64 def = 0, int radix = 10);
 	static uint64 try_to_uint64_def(const string& strSrc, uint64 def = 0, int radix = 10);
 
-	// ×Ö·û´®×ª¸¡µãĞÍÊı
+	// å­—ç¬¦ä¸²è½¬æµ®ç‚¹å‹æ•°
 	static bool   to_float(const string& strSrc, double& value);
 	static double to_float_def(const string& strSrc, double def = 0.0);
 	static double try_to_float_def(const string& strSrc, double def = 0.0);
 
-	// ÊıÖµ×ª×Ö·û´®
+	// æ•°å€¼è½¬å­—ç¬¦ä¸²
 	static string to_str(int nVal, const char* cpszFormat = NULL/*"%d"*/);
 	static string to_str(uint32 uVal, const char* cpszFormat = NULL/*"%u"*/);
 	static string to_str(int64 nlVal, const char* cpszFormat = NULL/*"%lld"*/);
 	static string to_str(uint64 ulVal, const char* cpszFormat = NULL/*"%llu"*/);
 	static string to_str(double fVal, const char* cpszFormat = NULL/*"%f"*/);
 
-	// ¸ñÊ½»¯Êä³ö(³¤¶ÈÏŞ10KB)
+	// æ ¼å¼åŒ–è¾“å‡º(é•¿åº¦é™10KB)
 	static string sprintf(const char cszFormat[], ...);
 
 	// string hash

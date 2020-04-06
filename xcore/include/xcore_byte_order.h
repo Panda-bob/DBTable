@@ -1,7 +1,7 @@
-// 2009-08-03
+ï»¿// 2009-08-03
 // xcore_byte_order.h
 // guosh
-// ×Ö½ÚĞò×ª»»
+// å­—èŠ‚åºè½¬æ¢
 
 
 #ifndef _XCORE_BYTE_ORDER_H_

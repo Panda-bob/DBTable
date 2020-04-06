@@ -1,7 +1,7 @@
-// 2008-02-23
+ï»¿// 2008-02-23
 // xcore_mutex.h
 // guosh
-// »¥³âËø(²»ÔÊÐíµÝ¹éËø)
+// äº’æ–¥é”(ä¸å…è®¸é€’å½’é”)
 
 
 #ifndef _XCORE_MUTEX_H_

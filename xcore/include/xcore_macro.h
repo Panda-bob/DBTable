@@ -1,4 +1,4 @@
-
+﻿
 
 #ifndef _XCORE_MACRO_H_
 #define _XCORE_MACRO_H_

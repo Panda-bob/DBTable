@@ -1,4 +1,4 @@
-#ifndef _DB_TOOL_CACHE_TABLE_H_
+﻿#ifndef _DB_TOOL_CACHE_TABLE_H_
 #define _DB_TOOL_CACHE_TABLE_H_
 
 #include <string>

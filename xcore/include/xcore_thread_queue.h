@@ -1,7 +1,7 @@
-// 2012-04-05
+О╩©// 2012-04-05
 // xcore_thread_queue.h
 // guosh
-// хннЯ╤сап
+// Д╩╩Е┼║И≤÷Е┬≈
 
 
 #ifndef _XCORE_THREAD_QUEUE_H_

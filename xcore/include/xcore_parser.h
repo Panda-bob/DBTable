@@ -1,7 +1,7 @@
-// date: 2011-04-25
+ï»¿// date: 2011-04-25
 // file: xcore_parser.h
 // auth: guosh
-// desc: »º³åÇø½âÎö¸¨ÖúÀà
+// desc: ç¼“å†²åŒºè§£æè¾…åŠ©ç±»
 
 
 #ifndef _XCORE_PARSER_H_

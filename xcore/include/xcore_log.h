@@ -1,7 +1,7 @@
-// 2008-06-05
+﻿// 2008-06-05
 // xcore_log.h
 // guosh
-// ��־�ࣨ���̰߳�ȫ��
+// 日志类（多线程安全）
 
 
 #ifndef _XCORE_LOG_H_
@@ -12,7 +12,7 @@
 
 namespace xcore
 {
-//��־��ɫ
+//日志颜色
 #ifdef __WINDOWS__
 
 #define TRED FOREGROUND_RED | FOREGROUND_INTENSITY
@@ -34,21 +34,21 @@ namespace xcore
 #endif
 
 
-// ��־�������
+// 日志输出级别
 enum XLOG_LEVEL
 {
-    XLOG_NONE		=	0,	// ����ӡ��־
-    XLOG_CRASH		=   1,  // ���ش���,���³����ܼ�������
-    XLOG_ERR		=   2,  // �������,���´���ʧ��(�������ڴ�ʧ�ܵ�)
-    XLOG_WARNING	=	3,	// ���򾯸�,���ܵ��´������(�紫�벻�Ϸ�����)
-    XLOG_NOTICE		=   4,  // ��������ֵ��ע������
-    XLOG_INFO	    =   5,  // ҵ����ص���Ϣ(��Ӱ��������̣�����ʾ�û���½������Ϣ)
-    XLOG_DEBUG	    =   6,  // ������Ϣ(��Ӱ��������̣����ӡ��ǰ�ڴ����δʹ���ڴ����Ŀ��)
-    XLOG_TRACE		=	7,	// ��ӡ�������й켣
+    XLOG_NONE		=	0,	// 不打印日志
+    XLOG_CRASH		=   1,  // 严重错误,导致程序不能继续运行
+    XLOG_ERR		=   2,  // 程序错误,导致处理失败(如申请内存失败等)
+    XLOG_WARNING	=	3,	// 程序警告,可能导致错误产生(如传入不合法参数)
+    XLOG_NOTICE		=   4,  // 正常但是值得注意的情况
+    XLOG_INFO	    =   5,  // 业务相关的信息(不影响程序流程，如显示用户登陆下线信息)
+    XLOG_DEBUG	    =   6,  // 调试信息(不影响程序流程，如打印当前内存池中未使用内存块数目等)
+    XLOG_TRACE		=	7,	// 打印程序运行轨迹
     XLOG_LEVEL_LIMIT
 };
 
-// ��־���λ��
+// 日志输出位置
 enum XLOG_OPTIONS
 {
     XLOG_OPTION_FILE		=   0x01,   // log on to file, default
@@ -60,13 +60,13 @@ enum XLOG_OPTIONS
 class XLogParam
 {
 public:
-	uint32			m_options;			// ָ�����λ��, see XLOG_OPTIONS
-	XLOG_LEVEL      m_level;			// ָ���������, see XLOG_PRIORITY
-	string			m_logdir;			// ��־�ļ���·��
-	string			m_ident;			// ��־��������(����������־�����ͬһ�ļ�����ʱ)
-	uint32			m_max_line;         // ÿ����־�ļ�����������������ʱ��������־�ļ�
-	uint32			m_keep_days;		// ��־�ļ���������
-	uint32			m_tcp_port;		    // ���tcp��ʱ�����˿�(0��ʾ����)
+	uint32			m_options;			// 指定输出位置, see XLOG_OPTIONS
+	XLOG_LEVEL      m_level;			// 指定输出级别, see XLOG_PRIORITY
+	string			m_logdir;			// 日志文件总路径
+	string			m_ident;			// 日志分类名称(如多个程序日志输出在同一文件夹下时)
+	uint32			m_max_line;         // 每个日志文件最大容纳行数，多出时创建新日志文件
+	uint32			m_keep_days;		// 日志文件保存天数
+	uint32			m_tcp_port;		    // 输出tcp流时监听端口(0表示禁用)
 
 	XLogParam()
 		: m_options(XLOG_OPTION_STDOUT)
@@ -85,30 +85,30 @@ public:
 class XLog
 {
 public:
-	// ��־ϵͳ��ʼ��
+	// 日志系统初始化
 	static bool   initialize(const XLogParam& param = XLogParam::Default);
 	static void   uninitialize();
 
-	// ���úͻ�ȡ��־�������
+	// 设置和获取日志输出级别
 	static void   set_level(uint32 lev/*see XLogLevel*/);
 	static uint32 get_level();
 
-	// ���úͻ�ȡ��־���ָ��
+	// 设置和获取日志输出指向
 	static void   set_options(uint32 opt/*see XLogOption*/);
 	static uint32 get_options();
 
-	// ���úͻ�ȡ��־��������
+	// 设置和获取日志保存天数
 	static void   set_keep_days(uint32 days);
 	static uint32 get_keep_days();
 
-	// ���úͻ�ȡTCP��־�������˿�(0��ʾ����)
+	// 设置和获取TCP日志流监听端口(0表示禁用)
 	static void   set_tcp_port(uint16 port);
 	static uint16 get_tcp_port();
 
-	// ���
+	// 输出
 	static void   printf(XLOG_LEVEL lev/*see XLogLevel*/, const char cszFormat[], ...);
 
-	// ������ɫ
+	// 设置颜色
 	static void	set_color(unsigned int color)
 	{
 		#ifndef __WINDOWS__

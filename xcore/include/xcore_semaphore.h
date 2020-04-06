@@ -1,7 +1,7 @@
-// 2008-02-27
+Ôªø// 2008-02-27
 // xcore_semaphore.h
 // guosh
-// –≈∫≈¡ø¿‡
+// ‰ø°Âè∑ÈáèÁ±ª
 
 
 #ifndef _XCORE_SEMAPHORE_H_

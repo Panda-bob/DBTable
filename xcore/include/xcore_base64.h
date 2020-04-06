@@ -1,7 +1,7 @@
-// 2009-06-11
+ï»¿// 2009-06-11
 // xcore_base64.h
 // guosh
-// base64 ±à½âÂë
+// base64 ç¼–è§£ç 
 
 
 #ifndef _XCORE_BASE_H_

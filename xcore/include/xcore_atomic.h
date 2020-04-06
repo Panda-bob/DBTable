@@ -1,7 +1,7 @@
-// 2009-07-27
+ï»¿// 2009-07-27
 // xcore_atomic.h
 // guosh
-// Ô­×Ó²Ù×÷Àà
+// åŸå­æ“ä½œç±»
 
 
 #ifndef _XCORE_ATOMIC_H_
@@ -22,20 +22,20 @@ public:
 	XAtomic32(const XAtomic32& from);
 	~XAtomic32();
 
-	int32 get_value() const;  // ·µ»Øµ±Ç°Öµ
-	int32 set_value(int32 i); // ·µ»ØÔ­Öµ
-	int32 test_zero_inc(); // ·µ»ØÔöÁ¿ºóµÄÖµ
+	int32 get_value() const;  // è¿”å›å½“å‰å€¼
+	int32 set_value(int32 i); // è¿”å›åŸå€¼
+	int32 test_zero_inc(); // è¿”å›å¢é‡åçš„å€¼
 
 	operator int32();
 	XAtomic32& operator= (int32 i);
 	XAtomic32& operator= (const XAtomic32& from);
 
-	int32 operator+= (int32 i); // ·µ»ØÔöÁ¿ºóµÄÖµ
-	int32 operator-= (int32 i); // ·µ»Ø¼õÁ¿ºóµÄÖµ
-	int32 operator++ (int); // ·µ»ØÔ­Öµ
-	int32 operator-- (int); // ·µ»ØÔ­Öµ
-	int32 operator++ (); // ·µ»ØÔöÁ¿ºóµÄÖµ
-	int32 operator-- (); // ·µ»Ø¼õÁ¿ºóµÄÖµ
+	int32 operator+= (int32 i); // è¿”å›å¢é‡åçš„å€¼
+	int32 operator-= (int32 i); // è¿”å›å‡é‡åçš„å€¼
+	int32 operator++ (int); // è¿”å›åŸå€¼
+	int32 operator-- (int); // è¿”å›åŸå€¼
+	int32 operator++ (); // è¿”å›å¢é‡åçš„å€¼
+	int32 operator-- (); // è¿”å›å‡é‡åçš„å€¼
 
 private:
 	volatile int32 m_counter;
@@ -52,20 +52,20 @@ public:
 	XAtomic64(const XAtomic64& from);
 	~XAtomic64();
 
-	int64 get_value() const;  // ·µ»Øµ±Ç°Öµ
-	int64 set_value(int64 i); // ·µ»ØÔ­Öµ
-	int64 test_zero_inc(); // ·µ»ØÔöÁ¿ºóµÄÖµ
+	int64 get_value() const;  // è¿”å›å½“å‰å€¼
+	int64 set_value(int64 i); // è¿”å›åŸå€¼
+	int64 test_zero_inc(); // è¿”å›å¢é‡åçš„å€¼
 
 	operator int64();
 	XAtomic64& operator= (int64 i);
 	XAtomic64& operator= (const XAtomic64& from);
 
-	int64 operator+= (int64 i); // ·µ»ØÔöÁ¿ºóµÄÖµ
-	int64 operator-= (int64 i); // ·µ»Ø¼õÁ¿ºóµÄÖµ
-	int64 operator++ (int); // ·µ»ØÔ­Öµ
-	int64 operator-- (int); // ·µ»ØÔ­Öµ
-	int64 operator++ (); // ·µ»ØÔöÁ¿ºóµÄÖµ
-	int64 operator-- (); // ·µ»Ø¼õÁ¿ºóµÄÖµ
+	int64 operator+= (int64 i); // è¿”å›å¢é‡åçš„å€¼
+	int64 operator-= (int64 i); // è¿”å›å‡é‡åçš„å€¼
+	int64 operator++ (int); // è¿”å›åŸå€¼
+	int64 operator-- (int); // è¿”å›åŸå€¼
+	int64 operator++ (); // è¿”å›å¢é‡åçš„å€¼
+	int64 operator-- (); // è¿”å›å‡é‡åçš„å€¼
 
 private:
 	volatile int64 m_counter;

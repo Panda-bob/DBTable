@@ -1,7 +1,7 @@
-// 2008-02-29
+﻿// 2008-02-29
 // xcore_memory.h
 // guosh
-// �Զ����ڴ����
+// 自定义内存管理
 
 
 #ifndef _XCORE_MEMORY_H_

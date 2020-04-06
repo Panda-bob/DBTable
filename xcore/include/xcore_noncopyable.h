@@ -1,7 +1,7 @@
-// 2010-12-02
+ï»¿// 2010-12-02
 // xcore_noncopyable.h
 // guosh
-// ²»¿É¿½±´Àà»ùÀà
+// ä¸å¯æ‹·è´ç±»åŸºç±»
 
 
 #ifndef _XCORE_NONCOPYABLE_H_

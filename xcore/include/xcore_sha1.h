@@ -1,4 +1,4 @@
-/* ---------------------------------------------------------------------------
+ï»¿/* ---------------------------------------------------------------------------
    commonc++ - A C++ Common Class Library
    Copyright (C) 2005-2011  Mark A Lindner
 
@@ -51,7 +51,7 @@ public:
 
 	void final(uint8(&digest)[20]);
 
-	// ·µ»Øsha1Ê®Áù½øÖÆ´óĞ´×ÖÄ¸×Ö·û´®
+	// è¿”å›sha1åå…­è¿›åˆ¶å¤§å†™å­—æ¯å­—ç¬¦ä¸²
 	string final();
 
 	virtual void reset() throw();
@@ -77,7 +77,7 @@ void hmac_sha1(const void* src, uint32 size_, const void* key, uint32 key_size_,
 
 string hmac_sha1(const void* src, uint32 size_, const void* key, uint32 key_size_);
 
-// ¼ÆËãÎÄ¼şsha1,Ê§°Ü·µ»Ø¿Õ×Ö·û´®
+// è®¡ç®—æ–‡ä»¶sha1,å¤±è´¥è¿”å›ç©ºå­—ç¬¦ä¸²
 string sha1_file(const string& filepath);
 
 }; // namespace xcore

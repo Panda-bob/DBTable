@@ -1,7 +1,7 @@
-// 2008-09-23
+ï»¿// 2008-09-23
 // xcore_file_util.h
 // guosh
-// ÎÄ¼şÏµÍ³²Ù×÷Àà
+// æ–‡ä»¶ç³»ç»Ÿæ“ä½œç±»
 
 
 #ifndef _XCORE_FILE_UTIL_H_
@@ -20,20 +20,20 @@ class XFileFinder
 public:
 	enum
 	{
-	    TYPE_NONE      = 0x00000000,   // Ã»ÓĞ
-	    TYPE_DIR       = 0x00000001,   // Ä¿Â¼
-	    TYPE_REGULAR   = 0x00000002,   // ÆÕÍ¨ÎÄ¼ş
-	    TYPE_LINK      = 0x00000004,   // ·ûºÅÁ¬½Ó
-	    TYPE_CHAR      = 0x00000008,   // ×Ö·ûÌØÊâÎÄ¼ş
-	    TYPE_BLOCK     = 0x00000010,   // ¿éÌØÊâÎÄ¼ş
-	    TYPE_FIFO      = 0x00000020,   // ¹ÜµÀ
-	    TYPE_SOCKET    = 0x00000040,   // Ì×½Ó×Ö
-	    TYPE_OTHER     = 0x00000080,   // ÆäËûÀàĞÍ
-	    TYPE_ALL       = 0x000000FF,   // ËùÓĞÎÄ¼şÀàĞÍ
+	    TYPE_NONE      = 0x00000000,   // æ²¡æœ‰
+	    TYPE_DIR       = 0x00000001,   // ç›®å½•
+	    TYPE_REGULAR   = 0x00000002,   // æ™®é€šæ–‡ä»¶
+	    TYPE_LINK      = 0x00000004,   // ç¬¦å·è¿æ¥
+	    TYPE_CHAR      = 0x00000008,   // å­—ç¬¦ç‰¹æ®Šæ–‡ä»¶
+	    TYPE_BLOCK     = 0x00000010,   // å—ç‰¹æ®Šæ–‡ä»¶
+	    TYPE_FIFO      = 0x00000020,   // ç®¡é“
+	    TYPE_SOCKET    = 0x00000040,   // å¥—æ¥å­—
+	    TYPE_OTHER     = 0x00000080,   // å…¶ä»–ç±»å‹
+	    TYPE_ALL       = 0x000000FF,   // æ‰€æœ‰æ–‡ä»¶ç±»å‹
 
-	    ATTR_HIDE      = 0x00000100,   // Òş²Ø
-	    ATTR_SYSTEM    = 0x00000200,   // ÏµÍ³ÎÄ¼ş
-	    ATTR_ALL       = 0x00000300    // ËùÓĞÊôĞÔ
+	    ATTR_HIDE      = 0x00000100,   // éšè—
+	    ATTR_SYSTEM    = 0x00000200,   // ç³»ç»Ÿæ–‡ä»¶
+	    ATTR_ALL       = 0x00000300    // æ‰€æœ‰å±æ€§
 	};
 
 public:
@@ -66,12 +66,12 @@ public:
 	static bool make_link(const string& strTargetPath, const string& strNewPath);
 	static bool make_link_p(const string& strTargetPath, const string& strNewPath);
 
-	// »ñÈ¡ÎÄ¼ş´óĞ¡£¬-1±íÊ¾Ê§°Ü
+	// è·å–æ–‡ä»¶å¤§å°ï¼Œ-1è¡¨ç¤ºå¤±è´¥
 	static int64  file_size(const string& filepath);
-	// ¶ÁÈ¡ÎÄ¼şËùÓĞÄÚÈİ
+	// è¯»å–æ–‡ä»¶æ‰€æœ‰å†…å®¹
 	static string read_all(const string& filepath);
 	static bool   read_all(string& content, const string& filepath);
-	// ±£´æµ½ÎÄ¼ş
+	// ä¿å­˜åˆ°æ–‡ä»¶
 	static bool   save_to_file(const string& content, const string& filepath);
 	static bool   append_to_file(const string& content, const string& filepath);
 

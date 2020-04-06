@@ -1,7 +1,7 @@
-// 2011-08-27
+ï»¿// 2011-08-27
 // xcore_utility.h
 // guosh
-// ÊµÓÃ¹¤¾ß
+// å®žç”¨å·¥å…·
 
 #ifndef _XCORE_UTILITY_H_
 #define _XCORE_UTILITY_H_

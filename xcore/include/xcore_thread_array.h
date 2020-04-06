@@ -1,7 +1,7 @@
-// 2011-06-16
+ï»¿// 2011-06-16
 // xcore_thread_array.h
 // guosh
-// Ïß³Ì×éÊµÏÖ
+// çº¿ç¨‹ç»„å®žçŽ°
 
 
 #ifndef _XCORE_THREAD_ARRAY_H_

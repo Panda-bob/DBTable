@@ -1,4 +1,4 @@
-#include "db_helper.h"
+ï»¿#include "db_helper.h"
 #include "xcore_log.h"
 #include "xcore_str_util.h"
 #include "xcore_conver.h"
@@ -276,7 +276,7 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 
 	fprintf(pf, "namespace db \n{\n\n");
 	fprintf(pf, "class %s\n{\n", table.table_class_name.c_str());
-	fprintf(pf,"public:\n");//½Ó¿Úº¯Êı
+	fprintf(pf,"public:\n");//æ¥å£å‡½æ•°
 
 	if (!make_h_construct(pf, table))
 		return false;
@@ -344,7 +344,7 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 	if (!make_h_get_table_count_func(pf, table))
 		return false;
 	
-	fprintf(pf,"\nprivate:\n");///private º¯Êı
+	fprintf(pf,"\nprivate:\n");///private å‡½æ•°
 
 	if (!make_h_create_table_sql(pf, table))
 		return false;
@@ -352,7 +352,7 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 	if (!make_h_select_private_func(pf, table))
 		return false;
 
-	fprintf(pf,"public:\n");//³ÉÔ±±äÁ¿
+	fprintf(pf,"public:\n");//æˆå‘˜å˜é‡
 
 	string strColumn;
 	for (unsigned int i = 0 ; i < table.m_columns.size(); ++i)
@@ -702,14 +702,14 @@ bool DBConvertCPP::make_cpp_insert_autokey_func(FILE* pf, const Cache_Table& tab
 	}
 
 	if (table.table_key_index.size() != 1 || nauto != 1)
-	{//·Çµ¥keyÇÒÓĞ×ÔÔö³¤µÄ±í¸Ãº¯ÊıÖÃ¿Õ
+	{//éå•keyä¸”æœ‰è‡ªå¢é•¿çš„è¡¨è¯¥å‡½æ•°ç½®ç©º
 		fprintf(pf, "bool %s::InsertAutoKey(vector<%s>& vecData)\n{\n", table.table_class_name.c_str(), table.table_class_name.c_str());
 		fprintf(pf, "\treturn false;\n");
 		fprintf(pf,"}\n\n");
 		return true;
 	}
 
-	//Èç¹ûÓĞµ¥¸ökey
+	//å¦‚æœæœ‰å•ä¸ªkey
 	fprintf(pf, "bool %s::InsertAutoKey(vector<%s>& vecData)\n{\n", table.table_class_name.c_str(), table.table_class_name.c_str());
 	fprintf(pf, "\tConnPtr ptrConn = TabCommon::Connect();\n");
 	fprintf(pf, "\tif (NULL == ptrConn.get())\n\t{\n\t\treturn false;\n\t}\n\n");
@@ -784,7 +784,7 @@ bool DBConvertCPP::make_cpp_insert_autokey_one_func(FILE* pf, const Cache_Table&
 	}
 
 	if (table.table_key_index.size() != 1 || nauto != 1)
-	{//·Çµ¥keyÇÒÓĞ×ÔÔö³¤µÄ±í¸Ãº¯ÊıÖÃ¿Õ
+	{//éå•keyä¸”æœ‰è‡ªå¢é•¿çš„è¡¨è¯¥å‡½æ•°ç½®ç©º
 		fprintf(pf, "bool %s::InsertAutoKey(%s& Data)\n{\n", table.table_class_name.c_str(), table.table_class_name.c_str());
 		fprintf(pf, "\treturn false;\n");
 		fprintf(pf,"}\n\n");

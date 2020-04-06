@@ -1,7 +1,7 @@
-// 2013-09-09
+ï»¿// 2013-09-09
 // db_mysql.h
 // guosh
-// mysqlÊı¾İ¿â²Ù×÷¼òÒª·â×°
+// mysqlæ•°æ®åº“æ“ä½œç®€è¦å°è£…
 
 #ifndef _DB_MYSQL_H_
 #define _DB_MYSQL_H_
@@ -23,7 +23,7 @@ class Conn;
 class Database;
 
 ////////////////////////////////////////////////////////////////////////////////
-// Ö§³ÖµÄÊı¾İÀàĞÍ°üÀ¨: null, bool, int64, double, string, binary, time
+// æ”¯æŒçš„æ•°æ®ç±»å‹åŒ…æ‹¬: null, bool, int64, double, string, binary, time
 // class Value
 ////////////////////////////////////////////////////////////////////////////////
 class Value
@@ -91,23 +91,23 @@ public:
 
 	bool   Next();
 
-	// ¸ù¾İË÷ÒıÈ¡Öµ
+	// æ ¹æ®ç´¢å¼•å–å€¼
 	bool   GetBool(uint32 idx);
 	int64  GetInt(uint32 idx);
 	double GetFloat(uint32 idx);
 	string GetString(uint32 idx);
 	string GetGBKString(uint32 idx);
 	XTime  GetTime(uint32 idx);
-	string GetBlob(uint32 idx); // ¶ş½øÖÆÊı¾İÒÔstring¶ÔÏó·µ»Ø
+	string GetBlob(uint32 idx); // äºŒè¿›åˆ¶æ•°æ®ä»¥stringå¯¹è±¡è¿”å›
 
-	// ¸ù¾İ½á¹û×Ö¶ÎÃûÈ¡Öµ(Ğ§ÂÊÉÔµÍ,É÷ÓÃ)
+	// æ ¹æ®ç»“æœå­—æ®µåå–å€¼(æ•ˆç‡ç¨ä½,æ…ç”¨)
 	bool   GetBool(const string& key);
 	int64  GetInt(const string& key);
 	double GetFloat(const string& key);
 	string GetString(const string& key);
 	string GetGBKString(const string& key);
 	XTime  GetTime(const string& key);
-	string GetBlob(const string& key); // ¶ş½øÖÆÊı¾İÒÔstring¶ÔÏó·µ»Ø
+	string GetBlob(const string& key); // äºŒè¿›åˆ¶æ•°æ®ä»¥stringå¯¹è±¡è¿”å›
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -123,7 +123,7 @@ class Statement
 	shared_ptr<IXBuffer> make();
 
 public:
-	// key±ØĞëÒÔ'@'¿ªÍ·
+	// keyå¿…é¡»ä»¥'@'å¼€å¤´
 	Statement* SetParameter(const string& key, const Value& value);
 
 	shared_ptr<Result> Exec();
@@ -147,16 +147,16 @@ class Conn : public enable_shared_from_this<Conn>
 public:
 	~Conn();
 
-	// ·¢ÆğÒ»¸öSQL²Ù×÷
+	// å‘èµ·ä¸€ä¸ªSQLæ“ä½œ
 	shared_ptr<Statement> Prepare(const string& sql);
 
-	// ¿ªÊ¼ÊÂÎñ(¶ÔISAMºÍMyISAMÊı¾İ¿âÎŞĞ§)
+	// å¼€å§‹äº‹åŠ¡(å¯¹ISAMå’ŒMyISAMæ•°æ®åº“æ— æ•ˆ)
 	bool Begin();
 
-	// Ìá½»ÊÂÎñ(¶ÔISAMºÍMyISAMÊı¾İ¿âÎŞĞ§)
+	// æäº¤äº‹åŠ¡(å¯¹ISAMå’ŒMyISAMæ•°æ®åº“æ— æ•ˆ)
 	bool Commit();
 
-	// »Ø¹öÊÂÎñ(¶ÔISAMºÍMyISAMÊı¾İ¿âÎŞĞ§)
+	// å›æ»šäº‹åŠ¡(å¯¹ISAMå’ŒMyISAMæ•°æ®åº“æ— æ•ˆ)
 	bool Rollback();
 	
 private:
@@ -200,7 +200,7 @@ public:
 
 	vector<string> Tables();
 
-	shared_ptr<Conn> Connect(int timeout = -1/*ºÁÃë*/);
+	shared_ptr<Conn> Connect(int timeout = -1/*æ¯«ç§’*/);
 
 	uint32 GetMaxIdleConn();
 	void SetMaxIdleConn(uint32 maxIdleConn);

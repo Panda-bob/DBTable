@@ -1,7 +1,7 @@
-// 2007-08-01
+ï»¿// 2007-08-01
 // xcore_md5.h
 // guosh
-// MD5Ö§³ÖÀà
+// MD5æ”¯æŒç±»
 
 
 #ifndef _XCORE_MD5_H_
@@ -26,7 +26,7 @@ public:
 
 	void final(uint8(&digest)[16]);
 
-	// ·µ»Ømd5Ê®Áù½øÖÆ´óĞ´×ÖÄ¸×Ö·û´®
+	// è¿”å›md5åå…­è¿›åˆ¶å¤§å†™å­—æ¯å­—ç¬¦ä¸²
 	string final();
 
 private:
@@ -52,7 +52,7 @@ void hmac_md5(const void* src, uint32 size_, const void* key, uint32 key_size_, 
 
 string hmac_md5(const void* src, uint32 size_, const void* key, uint32 key_size_);
 
-// ¼ÆËãÎÄ¼şmd5,Ê§°Ü·µ»Ø¿Õ×Ö·û´®
+// è®¡ç®—æ–‡ä»¶md5,å¤±è´¥è¿”å›ç©ºå­—ç¬¦ä¸²
 string md5_file(const string& filepath);
 
 } // namespace xcore

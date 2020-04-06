@@ -1,7 +1,7 @@
-// 2008-02-23
+ï»¿// 2008-02-23
 // xcore_critical.h
 // guosh
-// ÁÙ½çÇøÀà(ÔÊÐíµÝ¹éËø)
+// ä¸´ç•ŒåŒºç±»(å…è®¸é€’å½’é”)
 
 
 #ifndef _XCORE_CRITICAL_H_

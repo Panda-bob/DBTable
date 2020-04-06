@@ -1,7 +1,7 @@
-// 2013-09-09
+ï»¿// 2013-09-09
 // db_mysql.cpp
 // guosh
-// mysqlÊı¾İ¿â²Ù×÷¼òÒª·â×°
+// mysqlæ•°æ®åº“æ“ä½œç®€è¦å°è£…
 
 #include "db_mysql.h"
 #include "xcore_str_util.h"
@@ -15,7 +15,7 @@
 namespace mysql {
 
 ////////////////////////////////////////////////////////////////////////////////
-// Ö§³ÖµÄÊı¾İÀàĞÍ°üÀ¨: null, bool, int64, double, string, binary, time
+// æ”¯æŒçš„æ•°æ®ç±»å‹åŒ…æ‹¬: null, bool, int64, double, string, binary, time
 // class Value
 ////////////////////////////////////////////////////////////////////////////////
 Value::Value()
@@ -412,7 +412,7 @@ Statement* Statement::SetParameter(const string& key, const Value& value)
 
 shared_ptr<IXBuffer> Statement::make()
 {
-	// ¼ÆËãĞèÒªµÄ»º³åÇø¿Õ¼ä
+	// è®¡ç®—éœ€è¦çš„ç¼“å†²åŒºç©ºé—´
 	size_t sz = m_sql.size();
 	for (map<string, Value>::iterator it=  m_parameters.begin(); it != m_parameters.end(); ++it)
 	{
@@ -420,12 +420,12 @@ shared_ptr<IXBuffer> Statement::make()
 	}
 	sz = sz * 2 + 1;
 
-	// ÉêÇë»º³åÇø
+	// ç”³è¯·ç¼“å†²åŒº
 	shared_ptr<IXBuffer> ptrBuffer = xcore::create_buffer(sz);
 	char* pos = (char*)ptrBuffer->data();
 	uint32 len = 0;
 
-	// ¹¹Ôì
+	// æ„é€ 
 	uint32 count = 0;
 	XStrParser parser(m_sql.c_str(), m_sql.size());
 	while (!parser.eof())
@@ -884,7 +884,7 @@ uint32 Database::GetMaxIdleConn()
 
 void Database::SetMaxIdleConn(uint32 maxIdleConn)
 {
-	list<shared_ptr<Conn> > freeConns; // ×Ô¶¯Îö¹¹¹Ø±ÕÁ¬½Ó
+	list<shared_ptr<Conn> > freeConns; // è‡ªåŠ¨ææ„å…³é—­è¿æ¥
 	m_maxIdleConns = maxIdleConn;
 
 	m_lock.lock();
@@ -904,7 +904,7 @@ uint32 Database::GetMaxConn()
 
 void Database::SetMaxConn(uint32 maxConn)
 {
-	list<shared_ptr<Conn> > freeConns; // ×Ô¶¯Îö¹¹¹Ø±ÕÁ¬½Ó
+	list<shared_ptr<Conn> > freeConns; // è‡ªåŠ¨ææ„å…³é—­è¿æ¥
 	m_maxConns = maxConn;
 
 	m_lock.lock();
@@ -940,12 +940,12 @@ bool Database::put_conn(Conn* conn)
 	ASSERT(conn);
 	XLockGuard<XCritical> lock(m_lock);
 	if (m_useConns.erase(conn) <= 0) return false;
-	if (m_isClosed) return false; // ÒÑ¹Ø±Õ,²»ÔÙÍù¶ÓÁĞ·Å
+	if (m_isClosed) return false; // å·²å…³é—­,ä¸å†å¾€é˜Ÿåˆ—æ”¾
 	if ((uint32)(m_freeConns.size() + m_useConns.size()) < m_maxConns && 
 		(uint32) m_freeConns.size() < m_maxIdleConns)
 	{
 		m_freeConns.push_back(shared_ptr<Conn> (conn, Conn_deleter()));
-		m_event.set(); // Í¨Öª
+		m_event.set(); // é€šçŸ¥
 		return true;
 	}
 	return false;
@@ -994,14 +994,14 @@ void test_mymysql()
 	int64 last_insertid0 = ptrResult0->LastInsertId();
 	printf("affected_rows0=>%lld, last_insertid0=>%lld\n", affected_rows0, last_insertid0);
 
-	ASSERT(ptrConn->Begin()); // ÊÂÎñ¿ªÊ¼
+	ASSERT(ptrConn->Begin()); // äº‹åŠ¡å¼€å§‹
 
 	char buf[256];
 	for (int i = 0; i < 256; i++) buf[i] = (char)i;
 	shared_ptr<Result> ptrResult =
 	ptrConn->Prepare("insert into test values(NULL, @MyInt, @MyStr, @MyBlob, @MySmallInt, @MyChars, @MyNilInt, @MyNilStr, @MyTime, @MyDateTime)")
 		->SetParameter("@MyInt", 123)
-		->SetParameter("@MyStr", "helloÎÒÃÇbbbb")
+		->SetParameter("@MyStr", "helloæˆ‘ä»¬bbbb")
 		->SetParameter("@MyBlob", Value(buf, 256))
 		->SetParameter("@MySmallInt", 12)
 		->SetParameter("@MyChars", "abcdbcdbcdbcdbcd")
@@ -1015,8 +1015,8 @@ void test_mymysql()
 	int64 last_insertid = ptrResult->LastInsertId();
 	printf("affected_rows=>%lld, last_insertid=>%lld\n", affected_rows, last_insertid);
 
-	ASSERT(ptrConn->Commit()); // ÊÂÎñÌá½»
-	//ASSERT(ptrConn->Rollback()); // »Ø¹ö
+	ASSERT(ptrConn->Commit()); // äº‹åŠ¡æäº¤
+	//ASSERT(ptrConn->Rollback()); // å›æ»š
 
 	shared_ptr<Rows> ptrRows =
 	ptrConn->Prepare("select * from test")

@@ -1,7 +1,7 @@
-// 20010-09-29
+ï»¿// 20010-09-29
 // xcore_sock_addr.h
 // guosh
-// SockµØÖ·Àà
+// Sockåœ°å€ç±»
 
 
 #ifndef _XCORE_SOCK_ADDR_H_
@@ -22,7 +22,7 @@ public:
 	XSockAddr(const XSockAddr& addr);
 	XSockAddr(const sockaddr_in& addr);
 	XSockAddr(const sockaddr_in6& addr);
-	XSockAddr(const string& host, uint16 port); // host: ip»òÓòÃû
+	XSockAddr(const string& host, uint16 port); // host: ipæˆ–åŸŸå
 	~XSockAddr(void);
 
 	XSockAddr& operator = (const XSockAddr& addr);
@@ -36,20 +36,20 @@ public:
 	uint16 get_port() const;
 
 	// host such as "192.168.4.12" or "www.sina.com.cn"
-	// ÈÎÒâµÄipv4µØÖ·Îª"0.0.0.0"
-	// ÈÎÒâµÄipv6µØÖ·Îª"::"»ò"0:0:0:0:0:0:0:0"
+	// ä»»æ„çš„ipv4åœ°å€ä¸º"0.0.0.0"
+	// ä»»æ„çš„ipv6åœ°å€ä¸º"::"æˆ–"0:0:0:0:0:0:0:0"
 	bool   set_host(const string& host);
 	string get_hostaddr() const;
 
 	string to_str() const;
 	void   reset();
 
-	bool is_any() const; // ÈÎÒâ
-	bool is_none() const; // ÎŞĞ§
-	bool is_loop() const; // »·Â·
+	bool is_any() const; // ä»»æ„
+	bool is_none() const; // æ— æ•ˆ
+	bool is_loop() const; // ç¯è·¯
 
-	static bool local_addrs(vector<XSockAddr>& addrs);  // »ñÈ¡±¾»úËùÓĞIPµØÖ·
-	static bool resolve_dns(vector<XSockAddr>& addrs, const string& domain);  // ½âÎöÓòÃû
+	static bool local_addrs(vector<XSockAddr>& addrs);  // è·å–æœ¬æœºæ‰€æœ‰IPåœ°å€
+	static bool resolve_dns(vector<XSockAddr>& addrs, const string& domain);  // è§£æåŸŸå
 
 	friend bool operator == (const XSockAddr& addr1, const XSockAddr& addr2);
 	friend bool operator != (const XSockAddr& addr1, const XSockAddr& addr2);

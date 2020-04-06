@@ -1,4 +1,4 @@
-
+ï»¿
 #include "db_mysql.h"
 #include "cache_table.h"
 #include "xcore_time.h"
@@ -6,10 +6,10 @@
 #include "math.h"
 #include "db_helper.h"
 //#include "Table_activitys.h"
-//mysql ²éÑ¯¿âÖĞ±íµÄĞÅÏ¢
+//mysql æŸ¥è¯¢åº“ä¸­è¡¨çš„ä¿¡æ¯
 //SELECT * from INFORMATION_SCHEMA.TABLES  where TABLE_SCHEMA = 'honour';
 
-//mysql ²éÑ¯±íÖĞµÄÁĞĞÅÏ¢
+//mysql æŸ¥è¯¢è¡¨ä¸­çš„åˆ—ä¿¡æ¯
 //select * from INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA = 'honour' and TABLE_NAME = 'role_info_blob';
 
 string table_to_class_name(string strTable)

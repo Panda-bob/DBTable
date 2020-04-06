@@ -1,7 +1,7 @@
-// 2012-05-21
+ï»¿// 2012-05-21
 // xcore_json.h
 // guosh
-// ¶Ôjson±à½âÂëµÄÖ§³Ö
+// å¯¹jsonç¼–è§£ç çš„æ”¯æŒ
 
 #ifndef _XCORE_JSON_H_
 #define _XCORE_JSON_H_

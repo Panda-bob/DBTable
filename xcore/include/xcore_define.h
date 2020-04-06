@@ -1,7 +1,7 @@
-// 2008-02-22
+ï»¿// 2008-02-22
 // xcore_define.h
 // guosh
-// ¹«¹²Í·ÎÄ¼þ
+// å…¬å…±å¤´æ–‡ä»¶
 
 
 #ifndef _XCORE_DEFINE_H_
@@ -74,7 +74,7 @@ using namespace std;
 #include <sys/file.h>
 #include <sys/ioctl.h>
 #include <sys/poll.h>
-#include <sys/epoll.h> // linuxÌØÓÐ
+#include <sys/epoll.h> // linuxç‰¹æœ‰
 #include <pthread.h>
 #include <semaphore.h>
 #include <typeinfo>

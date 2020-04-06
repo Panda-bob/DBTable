@@ -1,4 +1,4 @@
-// Markup.h: interface for the XMarkup class.
+﻿// Markup.h: interface for the XMarkup class.
 //
 // Markup Release 10.0
 // Copyright (C) 2008 First Objective Software, Inc. All rights reserved

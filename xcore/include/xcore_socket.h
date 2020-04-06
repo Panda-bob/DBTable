@@ -1,7 +1,7 @@
-// 2008-12-03
+ï»¿// 2008-12-03
 // xcore_socket.h
 // guosh
-// socket¼òµ¥·â×°
+// socketç®€å•å°è£…
 
 
 #ifndef _XCORE_SOCKET_H_
@@ -39,7 +39,7 @@ public:
 	bool open(int type = SOCK_STREAM, uint16 family = AF_INET/* or AF_INET6 */);
 	bool bind(const XSockAddr& addr);
 	bool connect(const XSockAddr& addr);
-	// listenÊ±»á×Ô¶¯µ÷ÓÃbind
+	// listenæ—¶ä¼šè‡ªåŠ¨è°ƒç”¨bind
 	bool listen(const XSockAddr& addr, int backlog = -1);
 	bool accept(XSocket& sock, XSockAddr* remote_addr = NULL);
 	bool shutdown();

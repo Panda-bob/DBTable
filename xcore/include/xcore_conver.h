@@ -1,7 +1,7 @@
-// 2011-10-11
+﻿// 2011-10-11
 // xcore_conver.h
 // guosh
-// �ַ���ת��
+// 字符集转换
 
 #ifndef _XCORE_CONVER_H_
 #define _XCORE_CONVER_H_

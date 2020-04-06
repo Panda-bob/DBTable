@@ -1,7 +1,7 @@
-// 2011-06-16
+﻿// 2011-06-16
 // xcore_thread_pool.h
 // guosh
-// �̳߳�ʵ��
+// 线程池实现
 
 
 #ifndef _XCORE_THREAD_POOL_H_

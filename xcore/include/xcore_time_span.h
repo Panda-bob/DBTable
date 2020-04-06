@@ -1,7 +1,7 @@
-// 20010-09-29
+ï»¿// 20010-09-29
 // xcore_time_span.h
 // guosh
-// Ê±¼ä¶ÎÀà
+// æ—¶é—´æ®µç±»
 
 
 #ifndef _XCORE_TIME_SPAN_H_

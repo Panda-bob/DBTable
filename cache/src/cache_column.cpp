@@ -1,4 +1,4 @@
-#include "cache_column.h"
+ï»¿#include "cache_column.h"
 #include "xcore_log.h"
 #include "xcore_str_util.h"
 
@@ -133,8 +133,8 @@ bool Cache_column::prepare_c_type()
 	return (data_type != CDT_UNKNOW);
 }
 
-//³õÊ¼»¯c_createsql_default ºÍ c_construct_default ×Ö¶Î
-//ÒªÇó ÔÚ´ËÖ®Ç°±ØĞëÒÑ¾­µ÷ÓÃ¹ıprepare_C_Name() ºÍ prepare_C_Type()
+//åˆå§‹åŒ–c_createsql_default å’Œ c_construct_default å­—æ®µ
+//è¦æ±‚ åœ¨æ­¤ä¹‹å‰å¿…é¡»å·²ç»è°ƒç”¨è¿‡prepare_C_Name() å’Œ prepare_C_Type()
 bool Cache_column::prepare_c_default()
 {
 	if ( column_default.length() == 0)
