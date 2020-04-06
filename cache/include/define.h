@@ -1,10 +1,10 @@
-#ifndef _DB_TOOL_DEFINE_H_
+ï»¿#ifndef _DB_TOOL_DEFINE_H_
 #define _DB_TOOL_DEFINE_H_
 
 
 #include "common.h"
 
-//×Ö¶ÎÀàÐÍ
+//å­—æ®µç±»åž‹
 enum COLUMN_DATA_TYPE 
 {
 	CDT_UNKNOW,
