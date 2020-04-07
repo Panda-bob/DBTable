@@ -2,11 +2,13 @@
 set (HEADERS 
     common.h
     interface_module.h
-    app_config.h)
+    app_config.h
+    msg_config.h)
 
 set (SOURCES 
     common.cpp
-    app_config.cpp)
+    app_config.cpp
+    msg_config.cpp)
 
 
 include_directories(${PROJECT_SOURCE_DIR}/xcore/include)
