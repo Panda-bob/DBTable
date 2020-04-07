@@ -16,10 +16,10 @@ set (SOURCES
     main.cpp)
 
 
-include_directories(${CAMKE_SOURCE_DIR}/xcore/include)
-include_directories(${CMAKE_SOURCE_DIR}/db)
-include_directories(${CMAKE_SOURCE_DIR}/cache)
-include_directories(${CMAKE_SOURCE_DIR}/common)
+include_directories(${PROJECT_SOURCE_DIR}/xcore/include)
+include_directories(${PROJECT_SOURCE_DIR}/db)
+include_directories(${PROJECT_SOURCE_DIR}/cache)
+include_directories(${PROJECT_SOURCE_DIR}/common)
 include_directories(.)
 
 add_executable (dbtable

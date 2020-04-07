@@ -1,9 +1,12 @@
 #the lib-common CMakeLists.txt
 set (HEADERS 
-    common.h)
+    common.h
+    interface_module.h
+    app_config.h)
 
 set (SOURCES 
-    common.cpp)
+    common.cpp
+    app_config.cpp)
 
 
 #include_directories(${CMAKE_SOURCE_DIR}/common)

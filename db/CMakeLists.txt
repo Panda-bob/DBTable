@@ -8,8 +8,9 @@ set (SOURCES
     db_mysql.cpp)
 
 
-include_directories(${CMAKE_SOURCE_DIR}/common)
-include_directories(${CAMKE_SOURCE_DIR}/xcore/include)
+include_directories(${PROJECT_SOURCE_DIR}/common)
+include_directories(${PROJECT_SOURCE_DIR}/xcore/include)
+include_directories(/usr/local/mysql/include)
 include_directories(.)
 
 

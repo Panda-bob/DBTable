@@ -6,7 +6,7 @@
 #define _DB_MODULE_H_
 
 #include "xcore_define.h"
-#include "interface_module.h"
+//#include "interface_module.h"
 
 namespace db {
 
