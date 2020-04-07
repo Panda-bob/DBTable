@@ -9,7 +9,7 @@ set (SOURCES
     app_config.cpp)
 
 
-#include_directories(${CMAKE_SOURCE_DIR}/common)
+include_directories(${PROJECT_SOURCE_DIR}/common)
 #include_directories(${CAMKE_SOURCE_DIR}/xcore/include)
 include_directories(.)
 
