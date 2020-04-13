@@ -1,15 +1,19 @@
 #the lib-dbmysql CMakeLists.txt
 set (HEADERS 
+    app_config.h
     db_module.h
-    db_mysql.h)
+    db_mysql.h
+    )
 
 set (SOURCES 
+    app_config.cpp
     db_module.cpp
     db_mysql.cpp)
 
 
 include_directories(${PROJECT_SOURCE_DIR}/common)
 include_directories(${PROJECT_SOURCE_DIR}/xcore/include)
+include_directories(${PROJECT_SOURCE_DIR}/frame/)
 include_directories(/usr/local/mysql/include)
 include_directories(.)
 

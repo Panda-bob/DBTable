@@ -1,10 +1,4 @@
-// 2011-11-01
-// app_config.h
-// guosh
-// œµÕ≥≈‰÷√Œƒº˛
-
-
-#ifndef _APP_CONFIG_H_
+Ôªø#ifndef _APP_CONFIG_H_
 #define _APP_CONFIG_H_
 
 #include "xcore_define.h"
@@ -24,10 +18,10 @@ class AppConfig
 public:
 	static bool load(const string& path);
 
-	static const Config_GameServer& config();
+	static const ConfigServer& config();
 
 private:
-	static Config_GameServer m_config;
+	static ConfigServer m_config;
 };
 
 }//namespace frame

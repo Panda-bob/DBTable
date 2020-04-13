@@ -1,8 +1,4 @@
-// 2014-11-24
-// app_config.cpp
-// œµÕ≥≈‰÷√Œƒº˛
-
-#include "app_config.h"
+Ôªø#include "app_config.h"
 #include "xcore_file_util.h"
 #include "xcore_log.h"
 #include "xcore_utf8.h"
@@ -13,7 +9,7 @@ namespace frame
 ////////////////////////////////////////////////////////////////////////////////
 // class AppConfig
 ////////////////////////////////////////////////////////////////////////////////
-Config_GameServer AppConfig::m_config;
+ConfigServer AppConfig::m_config;
 
 AppConfig::AppConfig()
 {
@@ -27,7 +23,7 @@ AppConfig::~AppConfig()
 
 bool AppConfig::load(const string& path)
 {
-	// º”‘ÿ±æµÿ≈‰÷√–≈œ¢
+	// Âä†ËΩΩÊú¨Âú∞ÈÖçÁΩÆ‰ø°ÊÅØ
 	string content;
 	string format;
 	if (!XUTF8::readfile_to_utf8(content, format, path))
@@ -53,7 +49,7 @@ bool AppConfig::load(const string& path)
 	return true;
 }
 
-const Config_GameServer& AppConfig::config()
+const ConfigServer& AppConfig::config()
 {
 	return m_config;
 }
