@@ -33,7 +33,7 @@ public:
 	static bool make_table_createsql(const Cache_Table& table, string& strCppFunc);
 
 	static bool make_h_file(FILE* pf, const Cache_Table& table);
-	static bool make_h_create_table_sql(FILE* pf, const Cache_Table& table);
+	static bool make_h_create_table_sql(FILE* pf);
 	static bool make_h_create_table(FILE* pf);
 	static bool make_h_construct(FILE* pf, const Cache_Table& table);
 
@@ -45,10 +45,10 @@ public:
 	static bool make_h_replace(FILE* pf, const Cache_Table& table);
 
 	static bool make_h_update_func(FILE* pf, const Cache_Table& table);
-	static bool make_h_update_ex_func(FILE* pf, const Cache_Table& table);
+	static bool make_h_update_ex_func(FILE* pf);
 
 	static bool make_h_delete_func(FILE* pf, const Cache_Table& table);
-	static bool make_h_delete_all_func(FILE* pf, const Cache_Table& table);
+	static bool make_h_delete_all_func(FILE* pf);
 	static bool make_h_delete_with_keys_func(FILE* pf, const Cache_Table& table);
 
 	static bool make_h_select_ex_func(FILE* pf, const Cache_Table& table);
@@ -62,7 +62,7 @@ public:
 	static bool make_h_get_primary_keys_with_normal_key_func(FILE* pf, const Cache_Table& table);
 	static bool make_h_get_primary_key_with_unique_key_func(FILE* pf, const Cache_Table& table);
 	static bool make_h_get_all_primary_keys_func(FILE* pf, const Cache_Table& table);
-	static bool make_h_get_table_count_func(FILE* pf, const Cache_Table& table);
+	static bool make_h_get_table_count_func(FILE* pf);
 
 	static bool make_cpp_file(FILE* pf, const Cache_Table& table);
 	static bool make_cpp_create_table_sql(FILE* pf, const Cache_Table& table);

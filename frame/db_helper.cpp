@@ -305,7 +305,7 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 	if (!make_h_delete_with_keys_func(pf, table))
 		return false;
 	
-	if (!make_h_delete_all_func(pf, table))
+	if (!make_h_delete_all_func(pf))
 		return false;
 
 	if (!make_h_select_func(pf, table))
@@ -326,7 +326,7 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 	if (!make_h_update_func(pf, table))
 		return false;
 
-	if (!make_h_update_ex_func(pf, table))
+	if (!make_h_update_ex_func(pf))
 		return false;
 
 	if (!make_h_is_data_exist_func(pf, table))
@@ -341,12 +341,12 @@ bool DBConvertCPP::make_h_file(FILE* pf, const Cache_Table& table)
 	if (!make_h_get_all_primary_keys_func(pf, table))
 		return false;
 
-	if (!make_h_get_table_count_func(pf, table))
+	if (!make_h_get_table_count_func(pf))
 		return false;
 	
 	fprintf(pf,"\nprivate:\n");///private 函数
 
-	if (!make_h_create_table_sql(pf, table))
+	if (!make_h_create_table_sql(pf))
 		return false;
 	
 	if (!make_h_select_private_func(pf, table))
@@ -455,7 +455,7 @@ bool DBConvertCPP::make_cpp_file(FILE* pf, const Cache_Table& table)
 	return true;
 }
 
-bool DBConvertCPP::make_h_create_table_sql(FILE* pf, const Cache_Table& table)
+bool DBConvertCPP::make_h_create_table_sql(FILE* pf)
 {
 	fprintf(pf, "\tstatic string get_create_table_sql();\n");
 	return true;
@@ -895,7 +895,7 @@ bool DBConvertCPP::make_cpp_update_func(FILE* pf, const Cache_Table& table)
 	return true;
 }
 
-bool DBConvertCPP::make_h_update_ex_func(FILE* pf, const Cache_Table& table)
+bool DBConvertCPP::make_h_update_ex_func(FILE* pf)
 {
 	fprintf(pf, "\n\t//mapUpdate : key - column name, value - column data, strWhere eg : roleid = '100000'\n");
 	fprintf(pf, "\tstatic bool UpdateEx(const map<string, string>& mapUpdate, const string& strWhere);\n");
@@ -912,7 +912,7 @@ bool DBConvertCPP::make_cpp_update_ex_func(FILE* pf, const Cache_Table& table)
 	return true;
 }
 
-bool DBConvertCPP::make_h_delete_all_func(FILE* pf, const Cache_Table& table)
+bool DBConvertCPP::make_h_delete_all_func(FILE* pf)
 {
 	fprintf(pf, "\n\tstatic bool Delete();\n");
 	return true;
@@ -1463,7 +1463,7 @@ bool DBConvertCPP::make_cpp_get_all_primary_keys_func(FILE* pf, const Cache_Tabl
 }
 
 
-bool DBConvertCPP::make_h_get_table_count_func(FILE* pf, const Cache_Table& table)
+bool DBConvertCPP::make_h_get_table_count_func(FILE* pf)
 {
 	fprintf(pf, "\n\tstatic uint32 GetTableCount();\n");
 	return true;
@@ -1492,7 +1492,7 @@ bool DBConvertCPP::make_cpp_get_table_count_func(FILE* pf, const Cache_Table& ta
 bool DBConvertCPP::make_table_createsql(const Cache_Table& table, string& strCppFunc)
 {
 	string strTemp;
-	int nKeyIndex = -1;
+	//int nKeyIndex = -1;
 	strCppFunc =" create table IF NOT EXISTS " + table.table_name + "(";
 	for (unsigned int i = 0; i < table.m_columns.size(); ++i)
 	{

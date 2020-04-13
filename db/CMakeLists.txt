@@ -1,12 +1,12 @@
 #the lib-dbmysql CMakeLists.txt
 set (HEADERS 
-    app_config.h
+    #../frame/app_config.h
     db_module.h
     db_mysql.h
     )
 
 set (SOURCES 
-    app_config.cpp
+    #../frame/app_config.cpp
     db_module.cpp
     db_mysql.cpp)
 

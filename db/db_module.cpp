@@ -27,13 +27,13 @@ DBModule::~DBModule()
 
 bool DBModule::config()
 {
-	m_dbhost = AppConfig::instance()->get_db_host();
-	m_dbport = AppConfig::instance()->get_db_port();
-	m_dbscheme = AppConfig::instance()->get_db_scheme();
-	m_dbuser = AppConfig::instance()->get_db_user();
-	m_dbpasswd = AppConfig::instance()->get_db_password();
-	m_dbCharacterSet = AppConfig::instance()->get_db_character_set();
-	m_dbCharacterNames = AppConfig::instance()->get_db_character_names();
+	m_dbhost = AppConfig::config().m_mysql_info.m_host;
+	m_dbport = AppConfig::config().m_mysql_info.m_port;
+	m_dbscheme = AppConfig::config().m_mysql_info.m_scheme;
+	m_dbuser = AppConfig::config().m_mysql_info.m_user;
+	m_dbpasswd = AppConfig::config().m_mysql_info.m_password;
+	m_dbCharacterSet = "utf8";
+	m_dbCharacterNames = "character_set_database";
 	if (m_dbhost.empty()) m_dbhost = "localhost";
 
 	return true;

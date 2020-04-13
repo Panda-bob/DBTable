@@ -20,7 +20,10 @@ include_directories(${PROJECT_SOURCE_DIR}/xcore/include)
 include_directories(${PROJECT_SOURCE_DIR}/db)
 include_directories(${PROJECT_SOURCE_DIR}/cache)
 include_directories(${PROJECT_SOURCE_DIR}/common)
+include_directories(/usr/local/mysql/include)
 include_directories(.)
+
+link_directories(${PROJECT_SOURCE_DIR}/xcore/lib)
 
 add_executable (dbtable
     ${SOURCES}
@@ -31,6 +34,8 @@ target_link_libraries(dbtable
     #mysqlclient
     lib-dbmysql
     lib-cache
+    xcore
+    pthread
     )
 
 #set_property(TARGET dbtable PROPERTY FOLDER "dbtables")
