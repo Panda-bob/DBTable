@@ -1,6 +1,7 @@
 ﻿#include "cache_column.h"
 #include "xcore_log.h"
 #include "xcore_str_util.h"
+#include <iostream>
 
 
 COLUMN_DATA_TYPE Cache_column::conv_db_2_cdt(const string& dbType)
