@@ -130,6 +130,9 @@ bool Cache_column::prepare_c_type()
 	case CDT_TEXT:
 	case CDT_TIMESTAMP:
 	case CDT_MEDIUMBLOB:
+	case CDT_LONGBLOB:
+	case CDT_BINARY:
+	case CDT_VARBINARY:
 		{
 			c_member_type = "string";
 			c_format = "%s";
