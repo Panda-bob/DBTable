@@ -18,7 +18,23 @@ COLUMN_DATA_TYPE Cache_column::conv_db_2_cdt(const string& dbType)
 	MAKE_PAIR_CONV("text",      	CDT_TEXT);
 	MAKE_PAIR_CONV("bigint",    	CDT_BIGINT);
 	MAKE_PAIR_CONV("mediumblob",    CDT_MEDIUMBLOB);
-
+	MAKE_PAIR_CONV("bit", CDT_BIT);
+	MAKE_PAIR_CONV("bool", CDT_BOOL);
+	MAKE_PAIR_CONV("mediumint",CDT_MEDIUMINT);
+	MAKE_PAIR_CONV("float", CDT_FLOAT);
+	MAKE_PAIR_CONV("date", CDT_DATE);
+	MAKE_PAIR_CONV("datetime",CDT_DATATIME);
+	MAKE_PAIR_CONV("time", CDT_TIME);
+	MAKE_PAIR_CONV("year", CDT_YEAR);
+	MAKE_PAIR_CONV("binary",CDT_BINARY);
+	MAKE_PAIR_CONV("varbinary", CDT_VARBINARY);
+	MAKE_PAIR_CONV("tinyblob", CDT_TINYBLOB);
+	MAKE_PAIR_CONV("tinytext",CDT_TINYTEXT);
+	MAKE_PAIR_CONV("mediumtext", CDT_MEDIUMTEXT);
+	MAKE_PAIR_CONV("longblob",CDT_LONGBLOB);
+	MAKE_PAIR_CONV("longtext", CDT_LONGTEXT);
+	MAKE_PAIR_CONV("enum", CDT_ENUM);
+	MAKE_PAIR_CONV("set",CDT_SET);
 	XWARNING("[fix] dbtype = %s, is not in convert table;", dbType.c_str());
 	return CDT_UNKNOW;
 }
@@ -126,6 +142,7 @@ bool Cache_column::prepare_c_type()
 			return true;
 		}
 	default:
+		std::cout<< " the case the member type is "<< data_type <<" , not handle this type!!!!"<<std::endl;
 		return false;
 	}
 	return false;
