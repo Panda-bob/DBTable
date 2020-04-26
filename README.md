@@ -9,7 +9,7 @@
 
 ## Compile
 ###  Unix-like Operating Systems
-* this build with depend lib is libmysqlclient.so , you need install mysql first.
+* this build with depend lib libmysqlclient.so , you need install mysql first.
 	```
 	mkdir build
 	cd build && cmake ../
